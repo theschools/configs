@@ -1,0 +1,9 @@
+server:
+  port: 8074
+  servlet:
+    context-path: /finance
+spring:
+  application:
+    name: finance
+  main:
+    allow-bean-definition-overriding: true

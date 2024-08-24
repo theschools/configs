@@ -1,0 +1,9 @@
+server:
+  port: 8072
+  servlet:
+    context-path: /information
+spring:
+  application:
+    name: information
+  main:
+    allow-bean-definition-overriding: true
