@@ -1,0 +1,40 @@
+spring:
+  datasource:
+    url: jdbc:h2:mem:mydb
+    username: sa
+    password: sa
+    driverClassName: org.h2.Driver
+  h2:
+    console:
+      enabled: true
+  zipkin:
+#    base-url: http://localhost:9411/
+  flyway:
+    baseline-on-migrate: true
+  jpa:
+    show-sql: true
+    format-sql: true
+    hibernate:
+      ddl-auto: none
+    database-platform: org.hibernate.dialect.H2Dialect
+  security:
+    user:
+      name: admin
+      password: admin
+eureka:
+  client:
+    enabled: false
+    service-url:
+      defaultZone: http://localhost:8071/eureka/
+    fetch-registry: false
+    register-with-eureka: false
+  instance:
+    preferIpaddress: true
+logging:
+  level:
+    org:
+      hibernate:
+        arm:
+          jdbc:
+            bind: trace
+

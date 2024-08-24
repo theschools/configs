@@ -1,0 +1,29 @@
+server:
+  port: 8070
+spring:
+  application:
+    name: gateway
+  main:
+    allow-bean-definition-overriding: true
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8071/eureka/
+    fetch-registry: true
+    register-with-eureka: true
+  instance:
+   # hostname: localhost
+    preferIpaddress: true
+jwt:
+  secret: secret
+logging:
+  level:
+    com:
+      theschools:
+        gateway: DEBUG
