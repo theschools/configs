@@ -50,9 +50,9 @@ spring:
           limitForPeriod: 1
 services:
   security:
-    url: http://172.18.0.2:8075/
+    url: http://82.112.230.73:8075/
   finance:
-    url: http://172.18.0.2:8074/
+    url: http://82.112.230.73:8074/
 
 eureka:
   client:
