@@ -24,6 +24,6 @@ eureka:
     preferIpAddress: true
 services:
   information:
-    url: http://172.18.0.2:8072/
+    url: http://82.112.230.73:8072/
 jwt:
   secret: secret
