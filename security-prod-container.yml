@@ -42,6 +42,11 @@ logging:
 services:
   information:
     url: http://82.112.230.73:8072/
+management:
+    endpoints:
+      web:
+        exposure:
+          include: "*"
 
 
 
