@@ -27,3 +27,8 @@ services:
     url: http://82.112.230.73:8072/
 jwt:
   secret: secret
+management:
+    endpoints:
+      web:
+        exposure:
+          include: "*"
