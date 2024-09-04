@@ -1,14 +1,14 @@
 spring:
   datasource:
-    url: jdbc:mysql://82.112.230.73:3306/schools_info
+    url: jdbc:mysql://88.222.242.187:3306/schools_info
     username: new_admin
     password: new_password
   flyway:
     baseline-on-migrate: true
   zipkin:
-    baseUrl: http://82.112.230.73:9411
+    baseUrl: http://88.222.242.187:9411
   kafka:
-    bootstrap-servers: 82.112.230.73:9092
+    bootstrap-servers: 88.222.242.187:9092
   jpa:
     show-sql: true
 
@@ -50,9 +50,9 @@ spring:
           limitForPeriod: 1
 services:
   security:
-    url: http://82.112.230.73:8075/
+    url: http://88.222.242.187:8075/
   finance:
-    url: http://82.112.230.73:8074/
+    url: http://88.222.242.187:8074/
 
 eureka:
   client:
