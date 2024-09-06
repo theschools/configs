@@ -1,0 +1,21 @@
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+eureka:
+  client:
+    enabled: true
+    service-Url:
+      defaultZone: http://172.18.0.2:8071/eureka/
+    fetchRegistry: true
+    registerWithEureka: true
+  instance:
+    preferIpAddress: true
+jwt:
+  secret: secret
+logging:
+  level:
+    com:
+      theschools:
+        gateway: DEBUG
