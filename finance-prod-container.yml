@@ -1,8 +1,8 @@
 spring:
   datasource:
     url: jdbc:mysql://88.222.242.187:3306/schools_finance
-    username: root
-    password: Root@1234
+    username: new_admin
+    password: new_password
   jpa:
     show-sql: true
     hibernate:
@@ -24,7 +24,7 @@ eureka:
     preferIpAddress: true
 services:
   information:
-    url: http://82.112.230.73:8072/
+    url: http://88.222.242.187:8072/
 jwt:
   secret: secret
 management:
