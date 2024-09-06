@@ -4,8 +4,11 @@ spring:
     url: jdbc:mysql://88.222.242.187:3306/schools_security
     username: root
     password: Root@1234
+  sleuth:
+    enabled: false
   zipkin:
-    base-url: http://88.222.242.187:9411/
+    enabled: false
+    baseUrl: http://88.222.242.187:9411
   flyway:
     baseline-on-migrate: true
   security:

@@ -5,7 +5,10 @@ spring:
     password: Root@1234
   flyway:
     baseline-on-migrate: true
+  sleuth:
+    enabled: false
   zipkin:
+    enabled: false
     baseUrl: http://88.222.242.187:9411
   kafka:
     bootstrap-servers: 88.222.242.187:9092

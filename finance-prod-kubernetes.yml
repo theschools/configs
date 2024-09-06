@@ -7,8 +7,11 @@ spring:
     show-sql: true
     hibernate:
       ddl-auto: none
+  sleuth:
+    enabled: false
   zipkin:
-    base-url: http://88.222.242.187:9411/
+    enabled: false
+    baseUrl: http://88.222.242.187:9411
   flyway:
     baseline-on-migrate: true
   kafka:
