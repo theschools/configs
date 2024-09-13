@@ -3,11 +3,16 @@ management:
     web:
       exposure:
         include: "*"
+spring:
+  sleuth:
+    enabled: false
+  zipkin:
+    enabled: false
 eureka:
   client:
     enabled: true
     service-Url:
-      defaultZone: http://172.18.0.2:8071/eureka/
+      defaultZone: http://localhost:8071/eureka/
     fetchRegistry: true
     registerWithEureka: true
   instance:

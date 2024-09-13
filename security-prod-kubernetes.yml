@@ -30,7 +30,7 @@ spring:
       ddl-auto: none
 eureka:
   client:
-    enabled: true
+    enabled: false
     service-Url:
       defaultZone: http://172.18.0.2:8071/eureka/
     fetchRegistry: true

@@ -18,7 +18,7 @@ spring:
     bootstrap-servers: 88.222.242.187:9092
 eureka:
   client:
-    enabled: true
+    enabled: false
     service-Url:
       defaultZone: http://172.18.0.2:8071/eureka/
     fetchRegistry: true
