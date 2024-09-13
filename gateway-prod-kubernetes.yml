@@ -12,7 +12,7 @@ eureka:
   client:
     enabled: true
     service-Url:
-      defaultZone: http://localhost:8071/eureka/
+      defaultZone: http://eureka-container:8071/eureka/
     fetchRegistry: true
     registerWithEureka: true
   instance:
