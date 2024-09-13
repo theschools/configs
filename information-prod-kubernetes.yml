@@ -53,13 +53,13 @@ spring:
           limitForPeriod: 1
 services:
   security:
-    url: http://88.222.242.187:8075/
+    url: http://security-container:8075/
   finance:
-    url: http://88.222.242.187:8074/
+    url: http://finance-container:8074/
 
 eureka:
   client:
-    enabled: false
+    enabled: true
     service-url:
       defaultZone: http://eureka-container:8071/eureka/
     fetch-registry: true

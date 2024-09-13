@@ -18,16 +18,16 @@ spring:
     bootstrap-servers: 88.222.242.187:9092
 eureka:
   client:
-    enabled: false
+    enabled: true
     service-Url:
-      defaultZone: http://172.18.0.2:8071/eureka/
+      defaultZone: http://eureka-container:8071/eureka/
     fetchRegistry: true
     registerWithEureka: true
   instance:
     preferIpAddress: true
 services:
   information:
-    url: http://88.222.242.187:8072/
+    url: http://information-container:8072/
 jwt:
   secret: secret
 management:
