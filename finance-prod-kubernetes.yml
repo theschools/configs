@@ -8,10 +8,10 @@ spring:
     hibernate:
       ddl-auto: none
   sleuth:
-    enabled: false
+    enabled: true
   zipkin:
-    enabled: false
-    baseUrl: http://88.222.242.187:9411
+    enabled: true
+    baseUrl: http://zipkin-container:9411/
   flyway:
     baseline-on-migrate: true
   kafka:

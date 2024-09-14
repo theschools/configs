@@ -5,10 +5,10 @@ spring:
     username: root
     password: Root@1234
   sleuth:
-    enabled: false
+    enabled: true
   zipkin:
-    enabled: false
-    baseUrl: http://88.222.242.187:9411
+    enabled: true
+    baseUrl: http://zipkin-container:9411/
   flyway:
     baseline-on-migrate: true
   security:
