@@ -8,7 +8,7 @@ spring:
     enabled: true
   zipkin:
     enabled: true
-    baseUrl: http://zipkin-container:9411
+    baseUrl: http://zipkin-container:9411/
 
 eureka:
   client:
