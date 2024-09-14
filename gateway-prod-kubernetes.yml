@@ -5,9 +5,11 @@ management:
         include: "*"
 spring:
   sleuth:
-    enabled: false
+    enabled: true
   zipkin:
-    enabled: false
+    enabled: true
+    baseUrl: http://zipkin-container:9411
+
 eureka:
   client:
     enabled: true
