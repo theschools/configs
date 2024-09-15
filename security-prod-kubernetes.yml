@@ -1,4 +1,6 @@
 # For Prod Profile
+server:
+  shutdown: graceful
 spring:
   datasource:
     url: jdbc:mysql://88.222.242.187:3306/schools_security
@@ -37,6 +39,8 @@ eureka:
     registerWithEureka: true
   instance:
     preferIpAddress: true
+    leaseRenewalIntervalInSeconds: 10  # Interval to renew the lease
+    leaseExpirationDurationInSeconds: 30  # Timeout for removing an instance
 logging:
   level:
     org:
