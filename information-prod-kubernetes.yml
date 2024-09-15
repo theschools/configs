@@ -66,5 +66,7 @@ eureka:
     register-with-eureka: true
   instance:
     preferIpaddress: true
+    leaseRenewalIntervalInSeconds: 10  # Interval to renew the lease
+    leaseExpirationDurationInSeconds: 30  # Timeout for removing an instance
 jwt:
   secret: secret
