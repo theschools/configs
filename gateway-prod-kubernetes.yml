@@ -1,3 +1,5 @@
+server:
+  shutdown: graceful
 management:
   endpoints:
     web:
@@ -19,6 +21,8 @@ eureka:
     registerWithEureka: true
   instance:
     preferIpAddress: true
+    leaseRenewalIntervalInSeconds: 10  # Interval to renew the lease
+    leaseExpirationDurationInSeconds: 30  # Timeout for removing an instance
 jwt:
   secret: secret
 logging:
