@@ -22,7 +22,7 @@ eureka:
   client:
     enabled: true
     service-Url:
-      defaultZone: http://eureka-container:8071/eureka/
+      defaultZone: http://eureka-service:8071/eureka/
     fetchRegistry: true
     registerWithEureka: true
   instance:
@@ -31,7 +31,7 @@ eureka:
     leaseExpirationDurationInSeconds: 30  # Timeout for removing an instance
 services:
   information:
-    url: http://information-container:8072/
+    url: http://information-service:8072/
 jwt:
   secret: secret
 management:
