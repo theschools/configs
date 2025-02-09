@@ -11,7 +11,7 @@ spring:
     enabled: true
   zipkin:
     enabled: true
-    baseUrl: http://zipkin-container:9411/
+    baseUrl: http://88.222.242.187:30711/
   kafka:
     bootstrap-servers: 88.222.242.187:9092
   jpa:
@@ -55,9 +55,9 @@ spring:
           limitForPeriod: 1
 services:
   security:
-    url: http://88.222.242.187:30771:30775/
+    url: http://88.222.242.187:30775/
   finance:
-    url: http://88.222.242.187:30771:30774/
+    url: http://88.222.242.187:30774/
 
 eureka:
   client:
