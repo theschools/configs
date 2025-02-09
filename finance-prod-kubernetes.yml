@@ -31,7 +31,7 @@ eureka:
     leaseExpirationDurationInSeconds: 30  # Timeout for removing an instance
 services:
   information:
-    url: http://information-service:8072/
+    url: http://88.222.242.187:30771:30772/
 jwt:
   secret: secret
 management:

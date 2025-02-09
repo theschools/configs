@@ -55,9 +55,9 @@ spring:
           limitForPeriod: 1
 services:
   security:
-    url: http://security-container:8075/
+    url: http://88.222.242.187:30771:30775/
   finance:
-    url: http://finance-container:8074/
+    url: http://88.222.242.187:30771:30774/
 
 eureka:
   client:

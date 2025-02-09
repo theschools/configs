@@ -48,7 +48,7 @@ logging:
         security: DEBUG
 services:
   information:
-    url: http://information-container:8072/
+    url: http://88.222.242.187:30771:30772/
 management:
     endpoints:
       web:
