@@ -22,7 +22,7 @@ eureka:
   client:
     enabled: true
     service-Url:
-      defaultZone: http://88.222.242.187:8071/eureka/
+      defaultZone: http://88.222.242.187:30771/eureka/
     fetchRegistry: true
     registerWithEureka: true
   instance:
