@@ -7,9 +7,9 @@ spring:
     username: root
     password: Root@1234
   sleuth:
-    enabled: true
+    enabled: false
   zipkin:
-    enabled: true
+    enabled: false
     baseUrl: http://88.222.242.187:30711/
   flyway:
     baseline-on-migrate: true
