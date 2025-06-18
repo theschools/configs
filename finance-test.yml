@@ -10,13 +10,6 @@ spring:
       enabled: true
   zipkin:
     base-url: http://localhost:9411/
-  flyway:
-    baseline-on-migrate: true
-  jpa:
-    show-sql: true
-    hibernate:
-      ddl-auto: none
-    database-platform: org.hibernate.dialect.H2Dialect
   security:
     user:
       name: admin

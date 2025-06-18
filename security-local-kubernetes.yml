@@ -1,0 +1,59 @@
+# For Prod Profile
+server:
+  shutdown: graceful
+spring:
+  datasource:
+    url: jdbc:mysql://88.222.242.187:3306/schools_security
+    username: root
+    password: Root@1234
+  sleuth:
+    enabled: false
+  zipkin:
+    enabled: false
+    baseUrl: http://88.222.242.187:30711/
+  flyway:
+    baseline-on-migrate: true
+  security:
+    user:
+      name: admin
+      password: admin
+  oauth2:
+    client:
+      registration:
+        google:
+          client-id: <your-google-client-id>
+          client-secret: <your-google-client-secret>
+        facebook:
+          client-id: <your-facebook-client-id>
+          client-secret: <your-facebook-client-secret>
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: none
+eureka:
+  client:
+    enabled: true
+    service-Url:
+      defaultZone: http://88.222.242.187:30771/eureka/
+    fetchRegistry: true
+    registerWithEureka: true
+  instance:
+    preferIpAddress: true
+    leaseRenewalIntervalInSeconds: 10  # Interval to renew the lease
+    leaseExpirationDurationInSeconds: 30  # Timeout for removing an instance
+logging:
+  level:
+    org:
+      springframework:
+        security: DEBUG
+services:
+  information:
+    url: http://88.222.242.187:30772/
+management:
+    endpoints:
+      web:
+        exposure:
+          include: "*"
+
+
+

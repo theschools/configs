@@ -7,3 +7,16 @@ spring:
     name: finance
   main:
     allow-bean-definition-overriding: true
+  flyway:
+    baseline-on-migrate: true
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: none
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+jwt:
+  secret: secret
