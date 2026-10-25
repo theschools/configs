@@ -13,3 +13,7 @@ Docker profiles are complete and centralize logging, tracing, datasource, servic
 The history may still contain previously exposed credentials. Removing values from current files does not revoke those credentials. Rotate database credentials before treating them as private.
 
 No runtime secrets belong in this repository. Development/test credentials should be supplied in local environment variables. OAuth registrations require actual provider credentials; template credentials are not deployed.
+
+## Production deployment host
+
+The single source of truth is `production.host` in `deployment.json`. All six service deployment workflows fetch this file from the main branch and derive DEPLOY_HOST from it. Change that one field, commit/merge it, and subsequent deployments use the new host. The host is not a password and is not stored as six separate secrets or variables. Current workloads are not migrated automatically; prepare the target host and update trusted SSH host records when moving servers.
