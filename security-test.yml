@@ -4,19 +4,16 @@ spring:
     username: sa
     password: sa
     driverClassName: org.h2.Driver
-  h2:
-    console:
-      enabled: true
-  zipkin:
-#    base-url: http://localhost:9411/
   flyway:
     baseline-on-migrate: true
   jpa:
     show-sql: true
-    format-sql: true
     hibernate:
       ddl-auto: none
     database-platform: org.hibernate.dialect.H2Dialect
+    properties:
+      hibernate:
+        format_sql: true
   security:
     user:
       name: admin
@@ -33,8 +30,9 @@ eureka:
 logging:
   level:
     org:
-      hibernate:
-        arm:
-          jdbc:
-            bind: trace
-
+      hibernate: {}
+    org.hibernate.orm.jdbc.bind: TRACE
+management:
+  tracing:
+    export:
+      enabled: false

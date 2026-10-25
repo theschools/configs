@@ -5,5 +5,8 @@ server:
 spring:
   application:
     name: information
-  main:
-    allow-bean-definition-overriding: true
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,prometheus

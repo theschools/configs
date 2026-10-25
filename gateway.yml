@@ -3,6 +3,8 @@ server:
 spring:
   application:
     name: gateway
-  main:
-    allow-bean-definition-overriding: true
-
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,prometheus
