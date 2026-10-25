@@ -38,3 +38,6 @@ spring:
             connect-timeout: 5000
             read-timeout: 20000
             logger-level: basic
+services:
+  security:
+    url: http://security:8075/
