@@ -1,16 +1,9 @@
-# for test
 spring:
   datasource:
     url: jdbc:h2:mem:mydb
     username: sa
     password: sa
     driverClassName: org.h2.Driver
-  h2:
-    console:
-      enabled: true
-      path: /h2console/
-  zipkin:
-    base-url: http://localhost:9411/
   flyway:
     baseline-on-migrate: true
   jpa:
@@ -35,3 +28,9 @@ services:
     url: http://localhost:8075/
   finance:
     url: http://localhost:8074/
+management:
+  tracing:
+    export:
+      zipkin:
+        endpoint: http://localhost:9411/api/v2/spans
+      enabled: false

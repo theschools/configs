@@ -4,14 +4,14 @@ management:
   endpoints:
     web:
       exposure:
-        include: "*"
-spring:
-  sleuth:
-    enabled: true
-  zipkin:
-    enabled: true
-    baseUrl: http://zipkin-container:9411/
-
+        include: '*'
+  tracing:
+    export:
+      enabled: true
+      zipkin:
+        enabled: true
+        endpoint: http://zipkin-container:9411/api/v2/spans
+spring: {}
 eureka:
   client:
     enabled: true
@@ -21,10 +21,10 @@ eureka:
     registerWithEureka: true
   instance:
     preferIpAddress: true
-    leaseRenewalIntervalInSeconds: 10  # Interval to renew the lease
-    leaseExpirationDurationInSeconds: 30  # Timeout for removing an instance
+    leaseRenewalIntervalInSeconds: 10
+    leaseExpirationDurationInSeconds: 30
 jwt:
-  secret: secret
+  secret: ${JWT_SECRET}
 logging:
   level:
     com:

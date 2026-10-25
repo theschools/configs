@@ -5,12 +5,11 @@ spring:
     name: gateway
   main:
     allow-bean-definition-overriding: true
-
 management:
   endpoints:
     web:
       exposure:
-        include: "*"
+        include: '*'
 eureka:
   client:
     service-url:
@@ -18,10 +17,9 @@ eureka:
     fetch-registry: true
     register-with-eureka: true
   instance:
-   # hostname: localhost
     preferIpaddress: true
 jwt:
-  secret: secret
+  secret: ${JWT_SECRET}
 logging:
   level:
     com:

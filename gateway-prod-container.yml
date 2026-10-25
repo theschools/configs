@@ -1,0 +1,43 @@
+server:
+  shutdown: graceful
+eureka:
+  client:
+    enabled: true
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://eureka:8071/eureka/
+  instance:
+    prefer-ip-address: true
+    lease-renewal-interval-in-seconds: 10
+    lease-expiration-duration-in-seconds: 30
+jwt:
+  secret: ${JWT_SECRET}
+logging:
+  level:
+    com.theschools.gateway: INFO
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,prometheus
+  tracing:
+    export:
+      enabled: false
+      zipkin:
+        enabled: false
+  endpoint:
+    health:
+      show-details: never
+spring:
+  cloud:
+    openfeign:
+      client:
+        config:
+          default:
+            connect-timeout: 5000
+            read-timeout: 20000
+            logger-level: basic
+services:
+  security:
+    url: http://security:8075/
