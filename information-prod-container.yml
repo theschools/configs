@@ -1,6 +1,11 @@
 server:
+  port: 8072
+  servlet:
+    context-path: /information
   shutdown: graceful
 spring:
+  application:
+    name: information
   datasource:
     url: jdbc:mysql://host.docker.internal:3306/schools_info
     username: ${DB_USERNAME}

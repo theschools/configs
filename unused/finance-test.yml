@@ -2,18 +2,12 @@ spring:
   datasource:
     url: jdbc:h2:mem:mydb
     username: sa
-    password: sa
+    password: ${DB_PASSWORD}
     driverClassName: org.h2.Driver
-  flyway:
-    baseline-on-migrate: true
-  jpa:
-    hibernate:
-      ddl-auto: none
-    database-platform: org.hibernate.dialect.H2Dialect
   security:
     user:
       name: admin
-      password: admin
+      password: ${MAIL_PASSWORD}
 eureka:
   client:
     enabled: false
@@ -23,11 +17,6 @@ eureka:
     register-with-eureka: true
   instance:
     hostname: localhost
-services:
-  security:
-    url: http://localhost:8075/
-  finance:
-    url: http://localhost:8074/
 management:
   tracing:
     export:

@@ -1,4 +1,6 @@
 spring:
+  application:
+    name: security
   datasource:
     url: jdbc:mysql://host.docker.internal:3306/schools_security
     username: ${DB_USERNAME}
@@ -29,8 +31,6 @@ eureka:
     register-with-eureka: true
   instance:
     prefer-ip-address: true
-jwt:
-  secret: ${JWT_SECRET}
 logging:
   level:
     com.theschools.security: INFO
@@ -59,4 +59,7 @@ management:
       percentiles-histogram:
         http.server.requests: true
 server:
+  port: 8075
+  servlet:
+    context-path: /security
   shutdown: graceful

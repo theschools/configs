@@ -23,8 +23,6 @@ eureka:
     preferIpAddress: true
     leaseRenewalIntervalInSeconds: 10
     leaseExpirationDurationInSeconds: 30
-jwt:
-  secret: ${JWT_SECRET}
 logging:
   level:
     com:
