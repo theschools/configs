@@ -34,12 +34,6 @@ services:
   information:
     url: http://information:8072/
 management:
-  tracing:
-    export:
-      enabled: false
-      zipkin:
-        enabled: false
-        endpoint: http://zipkin:9411/api/v2/spans
   endpoints:
     web:
       exposure:
@@ -47,6 +41,22 @@ management:
   endpoint:
     health:
       show-details: never
+  tracing:
+    sampling:
+      probability: 0.1
+    export:
+      enabled: true
+      zipkin:
+        enabled: true
+        endpoint: http://zipkin:9411/api/v2/spans
+        connect-timeout: 1s
+        read-timeout: 5s
+  metrics:
+    tags:
+      application: ${spring.application.name}
+    distribution:
+      percentiles-histogram:
+        http.server.requests: true
 jwt:
   secret: ${JWT_SECRET}
 logging:
